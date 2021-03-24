@@ -9,10 +9,10 @@ using namespace std;
 
 
 namespace ariel{
-    void Board::post(unsigned int row, unsigned int col, Direction d, string const message){
+    void Board::post(unsigned int row, unsigned int col, Direction d, string const &message){
         // std::string location = to_string(row) + "," + to_string(col);
         // this->messages[location] = message;
-
+        ++this->x;
         std::cout << "post ";
         std::cout << message;
         std::cout << endl;
@@ -27,12 +27,14 @@ namespace ariel{
         //     }
         // }
         // return message;
+        ++this->x;
         return "A";
     }
 
     void Board::show(){
         // this->messages["100"] = "h";
         // std::cout << "message";
+        ++this->x;
         cout<<"show";
     };
 }
